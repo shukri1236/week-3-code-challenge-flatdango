@@ -1,0 +1,124 @@
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --background-color: #ecf0f1;
+    --text-color: #34495e;
+    --accent-color: #e74c3c;
+    --light-color: #f9f9f9;
+    --dark-color: #2c3e50;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+main {
+    display: flex;
+    flex: 1;
+}
+
+#movie-menu {
+    width: 30%;
+    background-color: var(--light-color);
+    padding: 1rem;
+    box-shadow: 2px 0 4px rgba(0,0,0,0.1);
+}
+
+#movie-details {
+    width: 70%;
+    padding: 2rem;
+    background-color: var(--light-color);
+}
+
+#films {
+    list-style-type: none;
+    padding: 0;
+}
+
+.film.item {
+    cursor: pointer;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--background-color);
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.film.item:hover {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+.sold-out {
+    opacity: 0.5;
+}
+
+#poster img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+button {
+    background-color: var(--accent-color);
+    border: none;
+    color: var(--light-color);
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+button:disabled {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+h2 {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+#title {
+    color: var(--primary-color);
+    font-size: 1.5em;
+}
+
+#runtime, #showtime, #available-tickets {
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+#description {
+    line-height: 1.6;
+    margin-top: 1rem;
+}
